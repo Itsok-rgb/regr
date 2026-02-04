@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💝 Will You Be My Valentine? 💝</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hearts Animation Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+    
+    <!-- Main Container -->
+    <div class="container" id="mainContainer">
+        
+        <!-- Welcome Screen -->
+        <div class="screen active" id="welcomeScreen">
+            <h1 class="title">💝 A Special Question 💝</h1>
+            <p class="subtitle">For someone very special...</p>
+            <button class="btn btn-primary" onclick="startProposal()">Click to Begin</button>
+        </div>
+
+        <!-- Memory Lane Screen -->
+        <div class="screen" id="memoryScreen">
+            <h2 class="section-title">Our Beautiful Journey</h2>
+            <div class="memory-cards" id="memoryCards">
+                <!-- Memory cards will be generated here -->
+            </div>
+            <button class="btn btn-primary" onclick="showNextScreen('reasonsScreen')">Continue</button>
+        </div>
+
+        <!-- Reasons I Love You Screen -->
+        <div class="screen" id="reasonsScreen">
+            <h2 class="section-title">Reasons I Love You</h2>
+            <div class="reasons-container">
+                <div class="reason-item animate-in" style="animation-delay: 0.2s">
+                    <span class="reason-number">1</span>
+                    <p>Your smile lights up my darkest days ☀️</p>
+                </div>
+                <div class="reason-item animate-in" style="animation-delay: 0.4s">
+                    <span class="reason-number">2</span>
+                    <p>Your laugh is my favorite sound 🎵</p>
+                </div>
+                <div class="reason-item animate-in" style="animation-delay: 0.6s">
+                    <span class="reason-number">3</span>
+                    <p>You make every moment an adventure 🌟</p>
+                </div>
+                <div class="reason-item animate-in" style="animation-delay: 0.8s">
+                    <span class="reason-number">4</span>
+                    <p>Your kindness inspires me every day 💖</p>
+                </div>
+                <div class="reason-item animate-in" style="animation-delay: 1s">
+                    <span class="reason-number">5</span>
+                    <p>With you, I'm home 🏡</p>
+                </div>
+            </div>
+            <button class="btn btn-primary" onclick="showNextScreen('counterScreen')">Continue</button>
+        </div>
+
+        <!-- Time Together Counter Screen -->
+        <div class="screen" id="counterScreen">
+            <h2 class="section-title">Time We've Shared</h2>
+            <div class="counter-grid">
+                <div class="counter-item">
+                    <div class="counter-value" id="daysCounter">0</div>
+                    <div class="counter-label">Days</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-value" id="hoursCounter">0</div>
+                    <div class="counter-label">Hours</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-value" id="minutesCounter">0</div>
+                    <div class="counter-label">Minutes</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-value" id="secondsCounter">0</div>
+                    <div class="counter-label">Seconds</div>
+                </div>
+            </div>
+            <p class="subtitle" style="margin-top: 30px;">And I want infinite more with you...</p>
+            <button class="btn btn-primary" onclick="showNextScreen('proposalScreen')">Continue</button>
+        </div>
+
+        <!-- The Proposal Screen -->
+        <div class="screen" id="proposalScreen">
+            <div class="proposal-content">
+                <h1 class="proposal-title">💕 My Dearest Love 💕</h1>
+                <p class="proposal-text">
+                    Every moment with you feels like a dream I never want to wake up from.
+                    You've filled my life with laughter, love, and endless joy.
+                    I can't imagine spending another Valentine's Day without you by my side.
+                </p>
+                <p class="proposal-question">
+                    Will you be my Valentine... forever? 💍
+                </p>
+                <div class="button-group">
+                    <button class="btn btn-yes" onclick="handleYes()">Yes! 💖</button>
+                    <button class="btn btn-no" id="noBtn" onclick="handleNo()" onmouseover="moveNoButton()">No</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Screen -->
+        <div class="screen" id="successScreen">
+            <div class="success-content">
+                <h1 class="celebration-title">🎉 YES! 🎉</h1>
+                <p class="celebration-text">You've made me the happiest person alive!</p>
+                <div class="fireworks" id="fireworks"></div>
+                <p class="final-message">I love you more than words can express ❤️</p>
+                <p class="final-message">Forever and always, you and me 💑</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
